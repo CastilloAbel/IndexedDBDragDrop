@@ -1,0 +1,61 @@
+body{
+    font-family: sans-serif;
+    background-color: #fff;
+}
+.persons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.person{
+    margin: 10px;
+    display: flex;
+    height: 40px;
+    flex-basis: 70%;
+    justify-content: center;
+    align-content: center;
+}
+.names{
+    border: none;
+    flex-grow: 1;
+    color: #fff;
+    background-color: #248;
+}
+.modify{
+    border: none;
+    flex-shrink: .4;
+    color: #fff;
+    background-color: #248;
+}
+.delete{
+    border: none;
+    flex-shrink: .4;
+    color: #fff;
+    background-color: #248;
+}
+.conteiner{
+    display: flex;
+    justify-content: center;
+}
+#input{
+    width: 70%;
+    height: 40px;
+    border: none;
+    background-color: rgb(184, 83, 0);
+    color: #fff;
+}
+#submit{
+    width: auto;
+    height: 40px;
+    border: none;
+    background-color: rgb(184, 83, 0);
+    color: #fff;
+}
+.conteiner-img{
+    display: flex;
+    justify-content: center;
+}
+.image{
+    width: 140px;
+    height:150px;
+}
