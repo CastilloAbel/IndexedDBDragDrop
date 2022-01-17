@@ -6,7 +6,7 @@ const img = document.querySelector(".image");
 var personas = 0;
 button.addEventListener("click", ()=>{
     const person = document.createElement("DIV");
-    person.classList.add("person", `person${personas}`)
+    person.classList.add("person", `person${personas}`);
     const htmlCode  = `
     <input class="names name${personas}" readonly="true" value="${input.value}" type="text">
     <input class="modify modify${personas}" type="submit" value="Modify">
@@ -16,13 +16,13 @@ button.addEventListener("click", ()=>{
     persons.appendChild(fragment);
     personas++;
 });
-if (personas > 0){
-    const del = document.querySelector("delete")
-    del.addEventListener("dragover", e=>{
-        e.preventDefault();
-        console.log("se esta moviendo")
-    })
-    img.addEventListener("drop", e=>{
-
-    })
-}
+// if (personas > 0){
+    // const del = document.querySelector(".delete")
+    // del.addEventListener("dragover", e=>{
+        // e.preventDefault();
+        // console.log("se esta moviendo")
+    // })
+    // img.addEventListener("drop", e=>{
+    //  }     console.group("se solto")
+    // })
+// }
