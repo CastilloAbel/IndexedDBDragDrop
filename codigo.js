@@ -1,9 +1,11 @@
+"use strict";
 const input = document.getElementById("input");
 const button = document.getElementById("submit");
 const persons = document.querySelector(".persons");
 const fragment = document.createDocumentFragment();
-const img = document.querySelector(".image");
+const img = document.querySelector(".conteiner-img");
 const IDBRequest = indexedDB.open("database", 1);
+const del = document.querySelector(".delete0")
 var personas = 0;
 button.addEventListener("click", ()=>{
     const person = document.createElement("DIV");
@@ -17,13 +19,15 @@ button.addEventListener("click", ()=>{
     persons.appendChild(fragment);
     personas++;
 });
-// if (personas > 0){
-    // const del = document.querySelector(".delete")
-    // del.addEventListener("dragover", e=>{
-        // e.preventDefault();
-        // console.log("se esta moviendo")
-    // })
-    // img.addEventListener("drop", e=>{
-    //  }     console.group("se solto")
-    // })
-// }
+
+    img.addEventListener("dragstart", (e)=>{
+        e.dataTransfer.setData("person", e.target.className)
+        console.log("se comenzo a mover");
+    })
+    del.addEventListener("dragover", e=>{
+        e.preventDefault();
+        console.log("se esta moviendo")
+    })
+    del.addEventListener("drop", ()=>{
+          console.group("se solto")
+   } )
