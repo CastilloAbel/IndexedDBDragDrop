@@ -3,6 +3,7 @@ const button = document.getElementById("submit");
 const persons = document.querySelector(".persons");
 const fragment = document.createDocumentFragment();
 const img = document.querySelector(".image");
+const IDBRequest = indexedDB.open("database", 1);
 var personas = 0;
 button.addEventListener("click", ()=>{
     const person = document.createElement("DIV");
